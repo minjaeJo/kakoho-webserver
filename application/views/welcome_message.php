@@ -1,89 +1,45 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+<!-- // 네이버 지도 예제는 2개의 프로그램으로 구성되어 있습니다. (지도표시, 주소좌표변환) -->
+<!-- 네이버 지도 표시 - web -->
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>간단한 지도 표시하기</title>
+      <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=dOnjoU1Na9T7X9cXEEqa&submodules=geocoder"></script>
 
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
-<body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-
-</body>
+  </head>
+  <body>
+    <div id="map" style="width:100%;height:400px;"></div>
+    <script>
+      var map = new naver.maps.Map('map', {center: new naver.maps.LatLng(37.3595704, 127.105399)});
+    </script>
+  </body>
 </html>
+
+  <!-- // 네이버 지도 Open API 예제 - 주소좌표변환 -->
+   <?php
+  $client_id = "dOnjoU1Na9T7X9cXEEqa";
+  $client_secret = "0f4on6vyXC";
+  $encText = urlencode("불정로 6");
+  $url = "https://openapi.naver.com/v1/map/geocode?query=".$encText; // json
+  // $url = "https://openapi.naver.com/v1/map/geocode.xml?query=".$encText; // xml
+
+  $is_post = false;
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_POST, $is_post);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $headers = array();
+  $headers[] = "X-Naver-Client-Id: ".$client_id;
+  $headers[] = "X-Naver-Client-Secret: ".$client_secret;
+  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+  $response = curl_exec ($ch);
+  $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  echo "status_code:".$status_code."<br>";
+  curl_close ($ch);
+  if($status_code == 200) {
+    echo $response;
+  } else {
+    echo "Error 내용:".$response;
+  }
+?>
