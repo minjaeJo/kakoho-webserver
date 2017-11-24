@@ -5,7 +5,7 @@
   <head>
       <meta charset="UTF-8">
       <title>간단한 지도 표시하기</title>
-      <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=&submodules=geocoder"></script>
+      <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=dOnjoU1Na9T7X9cXEEqa&submodules=geocoder"></script>
 
   </head>
   <body>
@@ -18,9 +18,9 @@
 
   <!-- // 네이버 지도 Open API 예제 - 주소좌표변환 -->
    <?php
-  $client_id = "";
-  $client_secret = "";
-  $encText = urlencode("불정로 6");
+  $client_id = "dOnjoU1Na9T7X9cXEEqa";
+  $client_secret = "0f4on6vyXC";
+  $encText = urlencode("전농로");
   $url = "https://openapi.naver.com/v1/map/geocode?query=".$encText; // json
   // $url = "https://openapi.naver.com/v1/map/geocode.xml?query=".$encText; // xml
 
