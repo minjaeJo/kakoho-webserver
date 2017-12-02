@@ -23,9 +23,9 @@ class Services extends Front_end
     // this function to load service book page
     function book_service()
     {
-        $this->view('content/book_service');
+        $this->view('theme/main_service');
     }
-    
+
     // this function receive ajax request and return closest providers
     function closest_locations(){
         $location =json_decode( preg_replace('/\\\"/',"\"",$_POST['data']));

@@ -1,12 +1,29 @@
-</div><!-- /.container -->
+<footer>
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-8 margin-20">
+            <ul class="list-inline social">
+              <li>Connect with us on</li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          
+          <div class="col-sm-4 text-right">
+            <p><small>Copyright &copy; 2017. All rights reserved. <br>
+	            Created by <a href="https://github.com/minjaeJo">MINJAE_CHO</a></small></p>
+          </div>
+        </div>
+        
+      </div>
+</footer>
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script>window.jQuery || document.write('<script src="<?= base_url()?>global/site/bootstrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="<?= base_url()?>global/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="<?= base_url()?>global/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../../global/js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="../../../global/js/wow.min.js"></script>
+    <script src="../../../global/js/bootstrap.min.js"></script>
+    <script src="../../../global/js/main.js"></script>
 </body>
 </html>
