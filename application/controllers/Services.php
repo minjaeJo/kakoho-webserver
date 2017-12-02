@@ -23,13 +23,11 @@ class Services extends Front_end
     // this function to load service book page
     function book_service()
     {
-
         $this->view('content/book_service');
-
     }
+    
     // this function receive ajax request and return closest providers
     function closest_locations(){
-
         $location =json_decode( preg_replace('/\\\"/',"\"",$_POST['data']));
         $lan=$location->longitude;
         $lat=$location->latitude;
@@ -45,12 +43,10 @@ class Services extends Front_end
                     $pieces = explode(",", $value);
                     $value = "$pieces[1]<a href='$base$pieces[0]'>More..</a>";
                 }
-
                 $x++;
             }
         }
         echo json_encode($indexed_providers,JSON_UNESCAPED_UNICODE);
-
     }
 
     function order_service_two()
@@ -67,7 +63,6 @@ class Services extends Front_end
             $this->view('content/order_service_two', $data);
         } else {
             print_r($this->input->post());
-
         }
     }
 
