@@ -50,7 +50,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 $db['default']['hostname'] = "localhost";
 $db['default']['username'] = "root";
-$db['default']['password'] = "s00135";
+$db['default']['password'] = "";
 $db['default']['database'] = "kakoho";
 
 
