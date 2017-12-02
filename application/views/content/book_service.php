@@ -35,9 +35,6 @@
                         <button type="button" onclick="RelatedLocationAjax();">show_closest_providers</button>
                     </div>
 
-                    <div id='submit_button'>
-                        <input class="btn btn-success" type="submit" name="submit" value="Send data"/>
-                    </div>
                 </form>
             </div>
         </div><!-- /.container -->

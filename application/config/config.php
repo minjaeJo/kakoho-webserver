@@ -15,7 +15,7 @@ $config['modules_locations'] = array(
 |	http://example.com/
 |  
 */
-$config['base_url']	= "http://localhost/codeigniter-nearest-markers-map/";
+$config['base_url']	= "http://localhost/";
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -69,7 +69,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'arabic';
+$config['language']	= 'kr';
 
 /*
 |--------------------------------------------------------------------------
