@@ -64,7 +64,7 @@
 </article>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&en=EN&key=AIzaSyDNyLsAhFt4hIZKeNJYC244jPPayM0GhrY"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA9WniMtyW0oPQwWrEHoyTDl2DrMgbH-0Y"></script>
 <script src="<?= base_url() ?>global/site/geocomplete.min.js"></script>
 <script>
     $(function () {
@@ -128,7 +128,7 @@
             $("#geocomplete").geocomplete({
                 map: ".map_canvas",
                 details: "form ",
-                location: [24.713551699,46.675295699]
+                location: [37.566535,126.977969]
             });
 
             $("#geocomplete").bind("geocode:click", function (event, latLng) {

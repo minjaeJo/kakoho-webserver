@@ -20,19 +20,4 @@
 
 <body>
 
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-    <a class="navbar-brand" href="#">Gogole Map with Codeigniter</a>
-    <ul class="nav navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="http://webeasystep.com/about">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="http://webeasystep.com/contact">Contact</a>
-        </li>
-    </ul>
-</nav>
-
 <div class="container">

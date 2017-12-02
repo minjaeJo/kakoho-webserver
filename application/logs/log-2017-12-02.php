@@ -49,3 +49,15 @@ DEBUG - 2017-12-02 04:26:15 --> No URI present. Default controller set.
 ERROR - 2017-12-02 04:26:15 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/drivers/mysqli/mysqli_driver.php 202
 ERROR - 2017-12-02 04:26:15 --> Severity: error --> Exception: Unable to connect to the database. /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/DB_driver.php 433
 DEBUG - 2017-12-02 04:26:27 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 04:27:13 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 04:54:33 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:18:48 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:22:00 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:24:28 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:24:37 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:24:41 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:24:43 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:25:01 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:25:14 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:26:00 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 05:27:38 --> No URI present. Default controller set.

@@ -55,7 +55,7 @@
     var map; // map variable
     var mapOptions = {
         zoom: 11,
-        center: {lat:24.774265, lng:46.738586}
+        center: {lat:37.566535 , lng:126.977969}
     }; // map options
     var markers = []; // markers array ,we will fill it dynamically
     var infoWindow = new google.maps.InfoWindow(); // information window ,we will use for our location and for markers
