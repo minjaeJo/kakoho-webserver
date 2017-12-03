@@ -138,3 +138,29 @@ DEBUG - 2017-12-02 11:18:05 --> No URI present. Default controller set.
 DEBUG - 2017-12-02 11:18:15 --> No URI present. Default controller set.
 DEBUG - 2017-12-02 11:18:17 --> No URI present. Default controller set.
 DEBUG - 2017-12-02 11:19:03 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:26:55 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:27:24 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:27:27 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:30:22 --> No URI present. Default controller set.
+ERROR - 2017-12-02 11:30:22 --> Severity: Warning --> mysqli::real_connect(): (HY000/2002): Connection refused /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/drivers/mysqli/mysqli_driver.php 202
+ERROR - 2017-12-02 11:30:22 --> Severity: error --> Exception: Unable to connect to the database. /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/DB_driver.php 433
+DEBUG - 2017-12-02 11:31:37 --> No URI present. Default controller set.
+ERROR - 2017-12-02 11:31:37 --> Severity: Warning --> mysqli::real_connect(): (HY000/2002): Connection refused /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/drivers/mysqli/mysqli_driver.php 202
+ERROR - 2017-12-02 11:31:37 --> Severity: error --> Exception: Unable to connect to the database. /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/DB_driver.php 433
+DEBUG - 2017-12-02 11:31:48 --> No URI present. Default controller set.
+ERROR - 2017-12-02 11:31:48 --> Severity: Warning --> mysqli::real_connect(): (HY000/2002): Connection refused /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/drivers/mysqli/mysqli_driver.php 202
+ERROR - 2017-12-02 11:31:48 --> Severity: error --> Exception: Unable to connect to the database. /Applications/mampstack-7.0.23-0/apache2/htdocs/system/database/DB_driver.php 433
+DEBUG - 2017-12-02 11:32:00 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:34:08 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:34:33 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:34:41 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:35:10 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:36:03 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:37:50 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:40:12 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:40:14 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:41:03 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 11:41:06 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 23:13:31 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 23:13:36 --> No URI present. Default controller set.
+DEBUG - 2017-12-02 23:42:34 --> No URI present. Default controller set.

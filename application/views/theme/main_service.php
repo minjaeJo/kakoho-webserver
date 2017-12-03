@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="logo" href="index.html"><img src="img/press-02.jpg" alt=""></a>
+          <a class="logo" href="main_service.php"><!--<img src="img/press-02.jpg" alt="">--><h4>KAKOHO</h4></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -21,10 +21,10 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="index.html"><img src="img/press-02.jpg" alt="Logo"></a>
+            <a href="main_service.php"><!--<img src="img/press-02.jpg" alt="">-->KAKOHO</a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
-            <a href="#pricing" class="scroll">Pricing</a>&nbsp; &nbsp;<a href="#">Sign in</a>
+            <a href="#">Sign in</a>
           </div>
         </div>
         
@@ -37,12 +37,14 @@
               
             <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <form role="form">
-              <div class="form-group column">
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+              <form role="form" class="form-inline">
+              
+              <div class="form-group">
+                  <input type="email" class="form-control" id="address" placeholder="주소를 입력해주세요">
               </div>
-              <button type="submit" class="btn btn-primary btn-lg">Request Invite</button>
+              <button type="submit" for="address" class="btn btn-primary btn-lg">Email</button>
               </form>
+              <button type="submit" class="btn btn-primary btn-lg">약속장소 찾기</button>
             </div>
           </div>
             
