@@ -4,13 +4,11 @@
  */
 class Services extends Front_end
 {
-
     function __construct()
     {
         parent::__construct();
         $this->load->model('services_model');
         $this->load->library('form_validation');
-
     }
 
 

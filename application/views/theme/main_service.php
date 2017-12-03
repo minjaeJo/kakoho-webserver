@@ -6,11 +6,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="logo" href="#"><!--<img src="img/press-02.jpg" alt="">--><h4>KAKOHO</h4></a>
+          <a class="logo" href="#"><!--<img src="img/press-02.jpg" alt="">-->KAKOHO</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#pricing" class="scroll">Pricing</a></li>
             <li><a href="#">Sign in</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
@@ -31,10 +30,12 @@
         <div class="row header-info">
             <!-- <div id="map" style="width:500px;height:500px"></div> -->
           <div class="col-sm-10 col-sm-offset-1 text-center">
-          <div id="map" style="width:500px;height:500px"></div>
+          
             <h1 class="wow fadeIn">우리의 중심은 어딜까?</h1>
             <br />
             <p class="lead wow fadeIn" data-wow-delay="0.5s">가장 합리적인 약속 장소를 골라주는 어플리케이션</p>
+            <br />
+            <div class="container" id="map" style="width:400px;height:200px"></div>
             <br />
           
             <div class="row">
