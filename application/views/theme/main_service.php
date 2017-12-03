@@ -21,19 +21,17 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="#"><!--<img src="img/press-02.jpg" alt="">-->KAKOHO</a>
+            <a href="#">KAKOHO</a>
           </div>
           <div class="col-xs-6 signin text-right navbar-nav">
             <a href="#">Sign in</a>
           </div>
         </div>
-        <!-- display map -->
-        <!-- <div class="form-group">
-          <div id="map" class="width:400px;height:400px"></div>
-        </div> -->
+        
         <div class="row header-info">
+            <!-- <div id="map" style="width:500px;height:500px"></div> -->
           <div class="col-sm-10 col-sm-offset-1 text-center">
-            <div id="map" class="width:400px;height:400px"></div>
+          <div id="map" style="width:500px;height:500px"></div>
             <h1 class="wow fadeIn">우리의 중심은 어딜까?</h1>
             <br />
             <p class="lead wow fadeIn" data-wow-delay="0.5s">가장 합리적인 약속 장소를 골라주는 어플리케이션</p>
@@ -55,7 +53,7 @@
           </div>
         </div>
       </div>
-    </header>
+      </header>
     
   <script>
     var lat = document.getElementById("lat"); // this will select the input with id = lat
