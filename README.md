@@ -1,2 +1,12 @@
 # kakoho-webserver
-친구들과의 가장 합리적인 약속 장소를 골라주는 어플리케이션
+App that recommends the most appropriate appointment place with friends
+
+## Install It
+
+```
+1. cd (~InstallPath)/htdocs/.
+2. git clone https://github.com/minjaeJo/kakoho-webserver.git
+3. mv ./kakoho-webserver ./
+4. connect http://localhost:8888
+```
+
