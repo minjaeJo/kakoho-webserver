@@ -21,7 +21,16 @@ class Services extends Front_end
     // this function to load service book page
     function main_service()
     {
-        $this->view('theme/main_service');
+        $this->load->library('googlemaps');
+        $config['center'] = '37.566535, 126.977969';
+        $config['zoom'] = '15';
+        $this->googlemaps->initialize($config);
+        
+        $marker = array();
+        $marker['position'] = '37.429, -122.1419';
+        $this->googlemaps->add_marker($marker);
+        $data['map'] = $this->googlemaps->create_map();
+        $this->view('theme/main_service', $data);
     }
 }
     // this function receive ajax request and return closest providers
