@@ -9,6 +9,8 @@ class Services extends Front_end
         parent::__construct();
         // $this->load->model('services_model');
         $this->load->library('form_validation');
+        $this->load->library('googlemaps');
+        $this->load->helper('form');        
     }
 
 
@@ -21,58 +23,29 @@ class Services extends Front_end
     // this function to load service book page
     function main_service()
     {
-        $this->load->library('googlemaps');
         $config['center'] = '37.566535, 126.977969';
-        $config['zoom'] = '15';
+        $config['zoom'] = '12';
         $this->googlemaps->initialize($config);
         
         $marker = array();
-        $marker['position'] = '37.429, -122.1419';
+        $marker['position'] = '37.566535, 126.977969';
         $this->googlemaps->add_marker($marker);
         $data['map'] = $this->googlemaps->create_map();
         $this->view('theme/main_service', $data);
     }
+    public function data_submitted() {
+        $data = array( 'address' => $this->input->post('address'));
+            if(isset($_POST["input"])) {
+                echo 'console.log("'.$address.'")';
+            }
+            if(isset($_POST["find"])){
+                echo 'console.log("'.$address.'")';
+            }   
+        $this->index();
+    }
+    public function submit()	{
+        $data = array( 'address' => $this->input->post('address'));
+    echo json_encode($data);
 }
-    // this function receive ajax request and return closest providers
-//     function closest_locations(){
-//         $location =json_decode( preg_replace('/\\\"/',"\"",$_POST['data']));
-//         $lan=$location->longitude;
-//         $lat=$location->latitude;
-//         $ServiceId=$location->ServiceId;
-//         $base = base_url();
-//         $providers= $this->services_model->get_closest_locations($lan,$lat,$ServiceId);
-//         $indexed_providers = array_map('array_values', $providers);
-//         // this loop will change retrieved results to add links in the info window for the provider
-//         $x = 0;
-//         foreach($indexed_providers as $arrays => &$array){
-//             foreach($array as $key => &$value){
-//                 if($key === 1){
-//                     $pieces = explode(",", $value);
-//                     $value = "$pieces[1]<a href='$base$pieces[0]'>More..</a>";
-//                 }
-//                 $x++;
-//             }
-//         }
-//         echo json_encode($indexed_providers,JSON_UNESCAPED_UNICODE);
-//     }
-
-//     function order_service_two()
-//     {
-//         $this->form_validation->set_rules('lat', 'lat', 'trim|required');
-//         $this->form_validation->set_rules('lng', 'lng', 'trim|required');
-//         $this->form_validation->set_rules('RequestAddress', 'RequestAddress', 'trim|required');
-
-//         if ($this->form_validation->run($this) == FALSE) {
-//             $data['error'] = validation_errors('
-//         <div class="alert alert-danger notices errorimg alert-dismissible" role="alert">
-//          <button type="button" class="close" data-dismiss="alert">
-//          <span aria-hidden="true">×</span><span class="sr-only">Close</span></button>', '</div> ');
-//             $this->view('content/order_service_two', $data);
-//         } else {
-//             print_r($this->input->post());
-//         }
-//     }
-
-// }
-/* End of file news.php */
-/* Location: ./application/controllers/Services.php */
+    
+}

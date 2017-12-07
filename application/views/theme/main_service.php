@@ -12,7 +12,6 @@
 	<meta property="og:site_name" content="">
 	<meta property="og:description" content="">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <script src="js/modernizr-3.5.0.js"></script>
     <?php echo $map['js']; ?>
     <!-- Styles -->
     <link rel="stylesheet" href="../../../global/css/font-awesome.min.css">
@@ -20,7 +19,38 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../../../global/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../global/css/main.css">
-    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" >
+            // Ajax post
+            $('#input1').click(function(){
+              $('#input1').hide();
+            });
+            $(document).ready(function() {
+                $("#find").click(function(event) {
+                    event.preventDefault();
+                    var address = $("input#address").val();
+                    console.log(address)
+                    // jQuery.ajax({
+                    //     type: "POST",
+                    //     url: "<?php echo base_url(); ?>" + "index.php/submit",
+                    //     dataType: 'json',
+                    //     data: {address: address},
+                    //     success: function(res) {
+                    //         if (res)
+                    //         {
+                    //             // Show Entered Value
+                    //             jQuery("div#test").show();
+                    //             jQuery("div#value").html(res.address);
+                    //             console.log(jQuery("div#test").show());
+                    //             console.log(jQuery("div#value").html(res.address));
+                    //             console.log('hi')
+                    //         }
+                    //     }
+                    // });
+                });
+            });
+        </script>  
 </head>
 
 <body>
@@ -56,14 +86,61 @@
             <br />
             <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <form role="form" class="form-inline">
+              <form role="form" class="form-inline" method="post">
               <div class="form-group">
-                  <input type="text" class="form-control" id="address" placeholder="주소를 입력해주세요">
+                <?php
+                  echo form_open();
+                  $form_address = array(
+                      'name' => 'address',
+                      'placeholder' => '주소를 입력해주세요',
+                      'class' => 'form-control',
+                      'id' => 'address'
+
+                  );
+                  echo form_input($form_address);
+                ?>
               </div>
-              <button type="submit" for="address" class="btn btn-primary btn-lg">입력하기</button>
-              </form>
+              <?php 
+                $input_data = array(
+                  'name'          => 'input',
+                  'class'         => 'btn btn-primary btn-lg',
+                  'id'            => 'input1',
+                  'value'         => 'input',
+                  // 'type'          => 'submit',
+                  'for'           => 'address',
+                  'content'       => '입력하기'
+                );
+                echo form_button($input_data);
+              ?>
+              <script>
+                $( "#input1" ).click(function() {
+                  console.log('h1')
+                });
+              </script>
               <br />
-              <button type="submit" class="btn btn-primary btn-lg">약속장소 찾기</button>
+              <br />
+              <?php 
+              $find_data = array(
+                  'name'          => 'find',
+                  'class'         => 'btn btn-primary btn-lg',
+                  'id'            => 'find',
+                  'value'         => 'find',
+                  // 'type'          => 'submit',
+                  'content'       => '약속장소찾기'
+                );
+                echo form_button($find_data);
+              ?>
+              <script>
+                $( "#find" ).click(function() {
+                  console.log('h2')
+                });
+              </script>
+              </form>
+              <?php echo form_close();?>
+              <?php if(isset($address)){
+                echo "<script>alert(\"이렇게 띄우면 되자나\");</script>";
+              }?>
+
             </div>
           </div>
             
