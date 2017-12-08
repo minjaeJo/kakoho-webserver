@@ -43,8 +43,11 @@ class Services extends Front_end
             }   
         $this->index();
     }
-    public function submit()	{
-        $data = array( 'address' => $this->input->post('address'));
+    public function inputData() {
+        $data = array(
+            'lat' => $this->input->post('lat'),
+            'lng' => $this->input->post('lng')
+        );
     echo json_encode($data);
 }
     

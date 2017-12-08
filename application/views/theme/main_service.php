@@ -49,15 +49,26 @@
                 $('#input_id').click(function(){
                 var address = $("#address").val();
                   console.log(address)
+                //googleMap geocoding API get
                   jQuery.ajax({
                     type: "GET", 
                     dataType: "json",
                     url: `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyA9WniMtyW0oPQwWrEHoyTDl2DrMgbH-0Y`,
                     success: function(data){
-                      console.log(data.results);
-                      console.log(data.results[0].geometry);
-                      console.log(data.results[0].geometry.location);
+                        console.log('성공하였습니다 => 다음 비동기 작업을 진행합니다');
                     }
+                  }).then((data)=>{ 
+                    var location = data.results[0].geometry.location;
+                      console.log(location)
+                      jQuery.ajax({
+                        type: "POST",
+                        url: "<?php echo base_url(); ?>" + "index.php/inputData",
+                        dataType: 'json',
+                        data: {lat: location.lat, lng: location.lng},
+                        success: function(res) {
+                          console.log(res)
+                        }
+                      })
                   });
                 //
               });
@@ -80,7 +91,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="logo" href="#"><img src="img/kakoho.png" alt="">KAKOHO</a>
+          <a class="logo" href="#"><!--<img src="img/kakoho.png" alt="">-->KAKOHO</a>
         </div>
       </div>
     </div>
@@ -89,7 +100,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="#"><img src="img/kakoho.png" alt="">KAKOHO</a>
+            <a href="#"><!--<img src="img/kakoho.png" alt="">-->KAKOHO</a>
           </div>
         </div>
         
@@ -123,7 +134,6 @@
                   'id'            => 'input_id',
                   'value'         => 'input',
                   // 'type'          => 'submit',
-                  'for'           => 'address',
                   'content'       => '입력하기'
                 );
                 echo form_button($input_data);
