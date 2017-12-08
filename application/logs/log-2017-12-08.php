@@ -120,3 +120,20 @@ DEBUG - 2017-12-08 12:39:39 --> No URI present. Default controller set.
 DEBUG - 2017-12-08 12:39:39 --> Google Maps Class Initialized
 DEBUG - 2017-12-08 12:39:45 --> No URI present. Default controller set.
 DEBUG - 2017-12-08 12:39:45 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 12:41:24 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 12:41:24 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 12:41:30 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 12:41:30 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 19:30:59 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 19:30:59 --> Google Maps Class Initialized
+ERROR - 2017-12-08 19:30:59 --> Severity: error --> Exception: Call to undefined method Services::view() /Applications/MAMP/htdocs/application/controllers/Services.php 33
+DEBUG - 2017-12-08 19:31:49 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 19:31:49 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 19:31:57 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 19:31:57 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 19:33:52 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 19:33:52 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 19:34:04 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 19:34:05 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 19:34:46 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 19:34:46 --> Google Maps Class Initialized

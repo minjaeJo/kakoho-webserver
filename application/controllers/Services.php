@@ -1,8 +1,7 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-/** @property services_model $services_model *
- */
-class Services extends Front_end
+class Services extends CI_Controller
 {
     function __construct()
     {
@@ -31,7 +30,7 @@ class Services extends Front_end
         $marker['position'] = '37.566535, 126.977969';
         $this->googlemaps->add_marker($marker);
         $data['map'] = $this->googlemaps->create_map();
-        $this->view('theme/main_service', $data);
+        $this->load->view('main_service', $data);
     }
     public function data_submitted() {
         $data = array( 'address' => $this->input->post('address'));
