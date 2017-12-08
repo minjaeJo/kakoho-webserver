@@ -23,33 +23,50 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
     <script type="text/javascript" >
             // Ajax post
-            $('#input1').click(function(){
-              $('#input1').hide();
-            });
             $(document).ready(function() {
-                $("#find").click(function(event) {
-                    event.preventDefault();
-                    var address = $("input#address").val();
-                    console.log(address)
-                    // jQuery.ajax({
-                    //     type: "POST",
-                    //     url: "<?php echo base_url(); ?>" + "index.php/submit",
-                    //     dataType: 'json',
-                    //     data: {address: address},
-                    //     success: function(res) {
-                    //         if (res)
-                    //         {
-                    //             // Show Entered Value
-                    //             jQuery("div#test").show();
-                    //             jQuery("div#value").html(res.address);
-                    //             console.log(jQuery("div#test").show());
-                    //             console.log(jQuery("div#value").html(res.address));
-                    //             console.log('hi')
-                    //         }
-                    //     }
-                    // });
+                // $("#find_id").click(function(event) {
+                //     event.preventDefault();
+                //     var address = $("input#address").val();
+                //     console.log(address)
+                //     jQuery.ajax({
+                //         type: "POST",
+                //         url: "<?php echo base_url(); ?>" + "Services/submit",
+                //         dataType: 'json',
+                //         data: {address: address},
+                //         success: function(res) {
+                //             if (res)
+                //             {
+                //                 // Show Entered Value
+                //                 jQuery("div#test").show();
+                //                 jQuery("div#value").html(res.address);
+                //                 console.log(jQuery("div#test").show());
+                //                 console.log(jQuery("div#value").html(res.address));
+                //                 console.log('hi')
+                //             }
+                //         }
+                //     });
+                // });
+                $('#input_id').click(function(){
+                var address = $("#address").val();
+                  console.log(address)
+                  jQuery.ajax({
+                    type: "GET", 
+                    dataType: "json",
+                    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyA9WniMtyW0oPQwWrEHoyTDl2DrMgbH-0Y`,
+                    success: function(data){
+                      console.log(data.results);
+                      console.log(data.results[0].geometry);
+                      console.log(data.results[0].geometry.location);
+                    }
+                  });
+                //
+              });
+                $( "#find_id" ).click(function() {
+                  console.log('찾아주세오');
                 });
+
             });
+  
         </script>  
 </head>
 
@@ -63,7 +80,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="logo" href="#"><!--<img src="img/press-02.jpg" alt="">-->KAKOHO</a>
+          <a class="logo" href="#"><img src="img/kakoho.png" alt="">KAKOHO</a>
         </div>
       </div>
     </div>
@@ -72,7 +89,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <a href="#">KAKOHO</a>
+            <a href="#"><img src="img/kakoho.png" alt="">KAKOHO</a>
           </div>
         </div>
         
@@ -95,7 +112,6 @@
                       'placeholder' => '주소를 입력해주세요',
                       'class' => 'form-control',
                       'id' => 'address'
-
                   );
                   echo form_input($form_address);
                 ?>
@@ -104,7 +120,7 @@
                 $input_data = array(
                   'name'          => 'input',
                   'class'         => 'btn btn-primary btn-lg',
-                  'id'            => 'input1',
+                  'id'            => 'input_id',
                   'value'         => 'input',
                   // 'type'          => 'submit',
                   'for'           => 'address',
@@ -112,35 +128,21 @@
                 );
                 echo form_button($input_data);
               ?>
-              <script>
-                $( "#input1" ).click(function() {
-                  console.log('h1')
-                });
-              </script>
               <br />
               <br />
               <?php 
               $find_data = array(
                   'name'          => 'find',
                   'class'         => 'btn btn-primary btn-lg',
-                  'id'            => 'find',
+                  'id'            => 'find_id',
                   'value'         => 'find',
                   // 'type'          => 'submit',
                   'content'       => '약속장소찾기'
                 );
                 echo form_button($find_data);
               ?>
-              <script>
-                $( "#find" ).click(function() {
-                  console.log('h2')
-                });
-              </script>
               </form>
               <?php echo form_close();?>
-              <?php if(isset($address)){
-                echo "<script>alert(\"이렇게 띄우면 되자나\");</script>";
-              }?>
-
             </div>
           </div>
             
