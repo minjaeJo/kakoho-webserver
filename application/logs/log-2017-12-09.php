@@ -560,3 +560,8 @@ DEBUG - 2017-12-09 04:01:23 --> Google Maps Class Initialized
 DEBUG - 2017-12-09 04:01:45 --> Google Maps Class Initialized
 DEBUG - 2017-12-09 04:01:50 --> Google Maps Class Initialized
 DEBUG - 2017-12-09 04:01:52 --> Google Maps Class Initialized
+DEBUG - 2017-12-09 04:08:55 --> No URI present. Default controller set.
+DEBUG - 2017-12-09 04:08:56 --> Google Maps Class Initialized
+DEBUG - 2017-12-09 04:09:07 --> Google Maps Class Initialized
+DEBUG - 2017-12-09 04:09:14 --> Google Maps Class Initialized
+DEBUG - 2017-12-09 04:09:16 --> Google Maps Class Initialized
