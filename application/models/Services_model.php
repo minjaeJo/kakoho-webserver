@@ -11,7 +11,7 @@ class Services_model extends CI_Model
     // around 30 kilo meters from your location
     // by using latitude , longtuide and service id //
     function get_closest_locations($lng,$lat,$ServiceId){
-        $results= $this->db->query("SELECT 
+        $results= $this->db->query("SELECT
     fullname,
     CONCAT(ci_providers.user_id,',',ServiceDesc) AS dscr,
     CONCAT(lat,',', lng) as pos,'http://maps.google.com/mapfiles/ms/icons/green.png' AS icon,

@@ -1,10 +1,5 @@
 <?php
 class Location_model extends CI_Model{
-	function __construct(){
-		parent::__construct();
-
-    $this->load->database();
-	}
 
 	//컨트롤러에서 좌표를 받아 그 좌표에서 3km안에 있는 역을 찾아냅니다.
 	//limit의 숫자 조정으로 반환하는 역의 개수를 조절할 수 있습니다.

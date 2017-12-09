@@ -24,6 +24,7 @@
     <script type="text/javascript" >
             // Ajax post
             $(document).ready(function() {
+              var locationArray = new Array();
                 // $("#find_id").click(function(event) {
                 //     event.preventDefault();
                 //     var address = $("input#address").val();
@@ -51,35 +52,49 @@
                   console.log(address)
                 //googleMap geocoding API get
                   jQuery.ajax({
-                    type: "GET", 
+                    type: "GET",
                     dataType: "json",
                     url: `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyA9WniMtyW0oPQwWrEHoyTDl2DrMgbH-0Y`,
                     success: function(data){
                         console.log('성공하였습니다 => 다음 비동기 작업을 진행합니다');
                     }
-                  }).then((data)=>{ 
+                  }).then((data)=>{
                     var location = data.results[0].geometry.location;
                       console.log(location)
-                    
+
                       jQuery.ajax({
                         type: "POST",
                         url: "index.php/Services/inputData",
                         dataType: 'json',
                         data: {lat: location.lat, lng: location.lng},
                         success: function(res) {
-                          console.log(res.lat)
+                          console.log(res)
+                          locationArray.push(res);
                         }
                       })
                   });
                 //
               });
                 $( "#find_id" ).click(function() {
-                  console.log('찾아주세오');
+                  console.log('찾아주세오')
+                  console.log(locationArray)
+                  jQuery.ajax({
+                    type: "POST",
+                    url: "index.php/Services/centerLocation",
+                    //url: "<?php echo base_url(); ?>" + "index.php/Services/inputData",
+                    dataType: 'json',
+                    data: {locationArray},
+                    success: function(res) {
+                      console.log("성공")
+                      console.log(res)
+                      locationArray=[];
+                    }
+                  })
                 });
 
             });
-  
-        </script>  
+
+        </script>
 </head>
 
 <body>
@@ -96,7 +111,7 @@
         </div>
       </div>
     </div>
-        
+
     <header>
       <div class="container">
         <div class="row">
@@ -104,7 +119,7 @@
             <a href="#"><!--<img src="img/kakoho.png" alt="">-->KAKOHO</a>
           </div>
         </div>
-        
+
         <div class="row header-info">
           <div class="col-sm-10 col-sm-offset-1 text-center">
             <h1 class="wow fadeIn">우리의 중심은 어딜까?</h1>
@@ -128,7 +143,7 @@
                   echo form_input($form_address);
                 ?>
               </div>
-              <?php 
+              <?php
                 $input_data = array(
                   'name'          => 'input',
                   'class'         => 'btn btn-primary btn-lg',
@@ -141,7 +156,7 @@
               ?>
               <br />
               <br />
-              <?php 
+              <?php
               $find_data = array(
                   'name'          => 'find',
                   'class'         => 'btn btn-primary btn-lg',
@@ -156,14 +171,14 @@
               <?php echo form_close();?>
             </div>
           </div>
-            
+
           </div>
         </div>
       </div>
       </header>
 <footer>
       <div class="container">
-        
+
         <div class="row">
           <div class="col-sm-8 margin-20">
             <ul class="list-inline social">
@@ -173,13 +188,13 @@
               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
-          
+
           <div class="col-sm-4 text-right">
             <p><small>Copyright &copy; 2017. All rights reserved. <br>
 	            Created by <a href="https://github.com/minjaeJo">MINJAE_CHO</a></small></p>
           </div>
         </div>
-        
+
       </div>
 </footer>
 
