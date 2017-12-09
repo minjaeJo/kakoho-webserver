@@ -137,3 +137,15 @@ DEBUG - 2017-12-08 19:34:04 --> No URI present. Default controller set.
 DEBUG - 2017-12-08 19:34:05 --> Google Maps Class Initialized
 DEBUG - 2017-12-08 19:34:46 --> No URI present. Default controller set.
 DEBUG - 2017-12-08 19:34:46 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 20:32:43 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 20:32:43 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 20:34:57 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 20:34:57 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 20:35:47 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 20:35:47 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 20:45:36 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 20:45:36 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 20:48:30 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 20:48:30 --> Google Maps Class Initialized
+DEBUG - 2017-12-08 20:50:47 --> No URI present. Default controller set.
+DEBUG - 2017-12-08 20:50:47 --> Google Maps Class Initialized

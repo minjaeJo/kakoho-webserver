@@ -60,13 +60,14 @@
                   }).then((data)=>{ 
                     var location = data.results[0].geometry.location;
                       console.log(location)
+                    
                       jQuery.ajax({
                         type: "POST",
-                        url: "<?php echo base_url(); ?>" + "index.php/inputData",
+                        url: 'http://localhost/index.php/datacontroller/inputData',
                         dataType: 'json',
                         data: {lat: location.lat, lng: location.lng},
                         success: function(res) {
-                          console.log(res)
+                          console.log('와씨')
                         }
                       })
                   });
@@ -117,7 +118,7 @@
               <form role="form" class="form-inline" method="post">
               <div class="form-group">
                 <?php
-                  echo form_open();
+                  echo form_open('Services/inputData');
                   $form_address = array(
                       'name' => 'address',
                       'placeholder' => '주소를 입력해주세요',
