@@ -34,11 +34,9 @@ class Location extends CI_Controller {
     //외부에서 받아오는 변수
     //$post_num = array();
     //$post_num = $_POST;
-    $post_num = $location;
+    $locationXY = $this->input->post();
 
-    var_dump($post_num);
-
-
+    var_dump($locationXY);
     $intnum = 0;
     $numX = 0;
     $numY = 0;
