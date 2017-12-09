@@ -63,11 +63,11 @@
                     
                       jQuery.ajax({
                         type: "POST",
-                        url: 'http://localhost/index.php/datacontroller/inputData',
+                        url: "index.php/Services/inputData",
                         dataType: 'json',
                         data: {lat: location.lat, lng: location.lng},
                         success: function(res) {
-                          console.log('와씨')
+                          console.log(res.lat)
                         }
                       })
                   });
