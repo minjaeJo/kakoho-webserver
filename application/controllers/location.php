@@ -6,13 +6,22 @@ class Location extends CI_Controller {
    parent::__construct();
    $this->load->helper('url');
    $this->load->helper('form');
+   //session_start();
+   //$this->load->library('session');
   }
 
   public function index() {
     //view에서 세개의 좌표를 입력받도록 form 설정되어 있습니다.
     //데모 확인을 위해서 부득이하게 location view도 같이 넣었습니다.
 		$this->load->view('location');
-    echo form_open('kakoho-webserver/index.php//location/centerLocation');
+    //echo form_open('kakoho-webserver/index.php//location/centerLocation');
+  }
+
+  public function insertLocation() {
+    $_SESSION['location'];
+    $location = array();
+    array_push($location, $_POST);
+    redirect('kakoho-webserver/index.php//location');
   }
 
   public function centerLocation() {
@@ -23,8 +32,11 @@ class Location extends CI_Controller {
     $this->load->model('location_model');
 
     //외부에서 받아오는 변수
-    $post_num = array();
-    $post_num = $_POST;
+    //$post_num = array();
+    //$post_num = $_POST;
+    $post_num = $location;
+
+    var_dump($post_num);
 
 
     $intnum = 0;

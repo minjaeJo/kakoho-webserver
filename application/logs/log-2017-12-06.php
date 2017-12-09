@@ -77,3 +77,57 @@ ERROR - 2017-12-06 17:26:15 --> Severity: 8192 --> Methods with the same name as
 DEBUG - 2017-12-06 17:26:15 --> Google Maps Class Initialized
 DEBUG - 2017-12-06 17:30:53 --> No URI present. Default controller set.
 DEBUG - 2017-12-06 17:30:53 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:12:25 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:12:26 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:12:33 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:12:34 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:14:04 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:14:05 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:19:53 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:19:54 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:20:16 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:20:17 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:20:34 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:20:35 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:26:54 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:26:55 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:28:29 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:28:30 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:28:35 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:28:36 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:35:42 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:35:43 --> Google Maps Class Initialized
+DEBUG - 2017-12-06 09:35:47 --> No URI present. Default controller set.
+DEBUG - 2017-12-06 09:35:48 --> Google Maps Class Initialized
+ERROR - 2017-12-06 09:38:36 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 63
+ERROR - 2017-12-06 09:38:36 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 64
+ERROR - 2017-12-06 09:38:36 --> Query error: Unknown column 'NAN' in 'field list' - Invalid query: SELECT STATION_CD, STATION_NM, XPOINT_WGS, YPOINT_WGS, ( 6371 * acos( cos( radians(NAN) ) * cos( radians(XPOINT_WGS) )
+* cos( radians(YPOINT_WGS) - radians(NAN) ) + sin( radians(NAN) ) * sin(radians(XPOINT_WGS)) ) ) AS distance
+  FROM ci_subway
+  HAVING distance < 3
+  ORDER BY distance
+  LIMIT 0 , 1
+ERROR - 2017-12-06 09:38:49 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 63
+ERROR - 2017-12-06 09:38:49 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 64
+ERROR - 2017-12-06 09:38:49 --> Query error: Unknown column 'NAN' in 'field list' - Invalid query: SELECT STATION_CD, STATION_NM, XPOINT_WGS, YPOINT_WGS, ( 6371 * acos( cos( radians(NAN) ) * cos( radians(XPOINT_WGS) )
+* cos( radians(YPOINT_WGS) - radians(NAN) ) + sin( radians(NAN) ) * sin(radians(XPOINT_WGS)) ) ) AS distance
+  FROM ci_subway
+  HAVING distance < 3
+  ORDER BY distance
+  LIMIT 0 , 1
+ERROR - 2017-12-06 09:40:02 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 63
+ERROR - 2017-12-06 09:40:02 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 64
+ERROR - 2017-12-06 09:40:02 --> Query error: Unknown column 'NAN' in 'field list' - Invalid query: SELECT STATION_CD, STATION_NM, XPOINT_WGS, YPOINT_WGS, ( 6371 * acos( cos( radians(NAN) ) * cos( radians(XPOINT_WGS) )
+* cos( radians(YPOINT_WGS) - radians(NAN) ) + sin( radians(NAN) ) * sin(radians(XPOINT_WGS)) ) ) AS distance
+  FROM ci_subway
+  HAVING distance < 3
+  ORDER BY distance
+  LIMIT 0 , 1
+ERROR - 2017-12-06 09:40:30 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 63
+ERROR - 2017-12-06 09:40:30 --> Severity: Warning --> Division by zero C:\Bitnami\wampstack-7.1.10-1\apache2\htdocs\kakoho-webserver\application\controllers\location.php 64
+ERROR - 2017-12-06 09:40:30 --> Query error: Unknown column 'NAN' in 'field list' - Invalid query: SELECT STATION_CD, STATION_NM, XPOINT_WGS, YPOINT_WGS, ( 6371 * acos( cos( radians(NAN) ) * cos( radians(XPOINT_WGS) )
+* cos( radians(YPOINT_WGS) - radians(NAN) ) + sin( radians(NAN) ) * sin(radians(XPOINT_WGS)) ) ) AS distance
+  FROM ci_subway
+  HAVING distance < 3
+  ORDER BY distance
+  LIMIT 0 , 1

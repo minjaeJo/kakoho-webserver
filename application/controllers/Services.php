@@ -25,7 +25,7 @@ class Services extends Front_end
         $config['center'] = '37.566535, 126.977969';
         $config['zoom'] = '15';
         $this->googlemaps->initialize($config);
-        
+
         $marker = array();
         $marker['position'] = '37.429, -122.1419';
         $this->googlemaps->add_marker($marker);
