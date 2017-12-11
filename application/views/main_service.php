@@ -25,28 +25,7 @@
             // Ajax post
             $(document).ready(function() {
               var locationArray = new Array();
-                // $("#find_id").click(function(event) {
-                //     event.preventDefault();
-                //     var address = $("input#address").val();
-                //     console.log(address)
-                //     jQuery.ajax({
-                //         type: "POST",
-                //         url: "<?php echo base_url(); ?>" + "Services/submit",
-                //         dataType: 'json',
-                //         data: {address: address},
-                //         success: function(res) {
-                //             if (res)
-                //             {
-                //                 // Show Entered Value
-                //                 jQuery("div#test").show();
-                //                 jQuery("div#value").html(res.address);
-                //                 console.log(jQuery("div#test").show());
-                //                 console.log(jQuery("div#value").html(res.address));
-                //                 console.log('hi')
-                //             }
-                //         }
-                //     });
-                // });
+
                 $('#input_id').click(function(){
                 var address = $("#address").val();
                   console.log(address)
@@ -81,7 +60,6 @@
                   jQuery.ajax({
                     type: "POST",
                     url: "index.php/Services/centerLocation",
-                    //url: "<?php echo base_url(); ?>" + "index.php/Services/inputData",
                     dataType: 'json',
                     data: {locationArray},
                     success: function(res) {
