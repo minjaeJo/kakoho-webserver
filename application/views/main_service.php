@@ -12,7 +12,7 @@
 	<meta property="og:site_name" content="">
 	<meta property="og:description" content="">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <?php echo $map['js']; ?>
+    
     <!-- Styles -->
     <link rel="stylesheet" href="../../../global/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../../global/css/animate.css">
@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="../../../global/css/main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+        width: '50%';
+      }
+    </style>
     <script type="text/javascript" >
             // Ajax post
             $(document).ready(function() {
@@ -65,7 +73,19 @@
                     success: function(res) {
                       console.log("성공")
                       console.log(res)
+                      console.log(res.XPOINT_WGS)
+                      console.log(Number(res.XPOINT_WGS))
                       locationArray=[];
+                      var uluru = {lat: parseFloat(res.XPOINT_WGS), lng: parseFloat(res.YPOINT_WGS)};
+                      var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: uluru
+                      });
+                      var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                      });
+                      
                     }
                   })
                 });
@@ -104,7 +124,18 @@
             <br />
             <p class="lead wow fadeIn" data-wow-delay="0.5s">가장 합리적인 약속 장소를 골라주는 어플리케이션</p>
             <br />
-            <?php echo $map['html']; ?>
+            <div id="map"></div>
+            <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat:37.566535 , lng:126.977969},
+                zoom: 11
+              });
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9WniMtyW0oPQwWrEHoyTDl2DrMgbH-0Y&callback=initMap"
+          async defer></script>
             <br />
             <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">

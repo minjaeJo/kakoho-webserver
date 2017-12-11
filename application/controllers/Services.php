@@ -20,15 +20,16 @@ class Services extends CI_Controller
 
     function main_service()
     {
-        $config['center'] = '37.566535, 126.977969';
-        $config['zoom'] = '12';
-        $this->googlemaps->initialize($config);
+        // $config['center'] = '37.566535, 126.977969';
+        // $config['zoom'] = '12';
+        // $this->googlemaps->initialize($config);
 
-        $marker = array();
-        $marker['position'] = '37.566535, 126.977969';
-        $this->googlemaps->add_marker($marker);
-        $data['map'] = $this->googlemaps->create_map();
-        $this->load->view('main_service', $data);
+       
+        // // $marker = array();
+        // // $marker['position'] = '37.566535, 126.977969';
+        // // $this->googlemaps->add_marker($marker);
+        // $data['map'] = $this->googlemaps->create_map();
+        $this->load->view('main_service');
     }
 
     public function inputData() {
@@ -101,6 +102,7 @@ class Services extends CI_Controller
 
       echo json_encode($li);
     }
+
 
 
 
