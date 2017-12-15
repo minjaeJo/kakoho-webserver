@@ -211,3 +211,44 @@ DEBUG - 2017-12-11 15:02:22 --> Google Maps Class Initialized
 DEBUG - 2017-12-11 15:02:24 --> Google Maps Class Initialized
 DEBUG - 2017-12-11 15:02:27 --> Google Maps Class Initialized
 DEBUG - 2017-12-11 15:02:28 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:08:52 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 15:08:52 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:09:20 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 15:09:20 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:09:35 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:09:36 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:09:38 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:09:38 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:10:21 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:10:28 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 15:10:28 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:10:39 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:10:47 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:10:51 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:10:52 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:11:36 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 15:11:36 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:11:50 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:11:53 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:11:55 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 15:16:15 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 15:16:15 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:55:33 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 17:55:33 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:55:50 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:56:03 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:56:09 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:56:10 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:56:35 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:56:38 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 17:56:39 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:51:48 --> No URI present. Default controller set.
+DEBUG - 2017-12-11 18:51:48 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:57:03 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:57:10 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:57:32 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:57:34 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:58:24 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:58:30 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:58:39 --> Google Maps Class Initialized
+DEBUG - 2017-12-11 18:58:40 --> Google Maps Class Initialized
