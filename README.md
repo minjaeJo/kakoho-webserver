@@ -4,13 +4,14 @@ App that recommends the most appropriate appointment place with friends
 ## Install It
 
 ```
-1. cd (~InstallPath)/htdocs/.
-2. git clone https://github.com/minjaeJo/kakoho-webserver.git
-3. mv ./kakoho-webserver ./
+1. $cd (~InstallPath)/htdocs/.
+2. $git clone https://github.com/minjaeJo/kakoho-webserver.git
+3. $mv ./kakoho-webserver ./
 4. connect http://localhost:8888
+5. insert SQL query in application/tables/ci_sessions.sql & ci_subway.sql
 ```
 
-![kakoho](https://github.com/minjaeJo/kakoho-webserver/blob/master/kakoho.png?raw=true)
+![kakoho](https://github.com/minjaeJo/kakoho-webserver/blob/master/global/img/kakoho.png?raw=true)
 
 ## Todo
 
